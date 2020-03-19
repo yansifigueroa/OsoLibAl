@@ -52,8 +52,7 @@ public class OVecR2 {
         OVecR2 a1 = new OVecR2();
         a1.x = (b.x) - x;
         a1.y = (b.y) - y;
-        double a = Math.pow(a1.x, 2)
-        return Math.sqrt(a);
+        return Math.sqrt(x);
     }
 
     // constructores
