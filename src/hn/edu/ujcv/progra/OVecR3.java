@@ -1,5 +1,7 @@
 package hn.edu.ujcv.progra;
 
+import java.awt.*;
+
 public class OVecR3 {
     // miembros
 
@@ -61,15 +63,6 @@ public class OVecR3 {
         double a = a1.x + a1.y + a1.z ;        return 0.0f;
     }
 
-    public double magnitud(){
-        //TODO: implementar
-        OVecR3 a1 = new OVecR3();
-        a1.x = (b.x) - x;
-        a1.y = (b.y) - y;
-        a1.z = (b.z) - z;
-        double a = Math.pow(a1.x, 2) + Math.pow(a1.y,2) + Math.pow(a1.z,2);
-        return 0.0f;
-    }
 
     // metodos
 
