@@ -27,7 +27,6 @@ public class OVecR3 {
         this.z = b.z;
     }
 
-
     public OVecR3 suma(OVecR3 b){
         //TODO: implementar
         OVecR3 a1 = new OVecR3();
