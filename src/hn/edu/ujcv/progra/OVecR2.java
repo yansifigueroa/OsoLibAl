@@ -9,8 +9,6 @@ public class OVecR2 {
 
     // accesoras y mutadoras
 
-    // metodos
-
     public OVecR2 suma(OVecR2 b){
         //TODO: implementar
         OVecR2 a1 = new OVecR2();
