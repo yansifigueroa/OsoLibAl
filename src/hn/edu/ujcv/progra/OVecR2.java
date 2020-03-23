@@ -28,7 +28,7 @@ public class OVecR2 {
         return new OVecR2();
     }
 
-    public double prodPunto(OVecR2 b){
+    public double productoPunto(OVecR2 b){
         //TODO: implementar
         OVecR2 a1 = new OVecR2();
         a1.x = x * b.x;
@@ -37,7 +37,7 @@ public class OVecR2 {
         return a;
     }
 
-    public double escalaporvector(OVecR2 b){
+    public double escalaPorVector(OVecR2 b){
         //TODO: implementar
         OVecR2 a1 = new OVecR2();
         double alpha = 0;
