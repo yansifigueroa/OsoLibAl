@@ -75,11 +75,6 @@ public class Main {
                                             a.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
                                             a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
                                             b = new OVecR2();
-                                            System.out.println("Ingrese X2 y Y2");
-                                            b.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
-                                            b.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
-                                            t = a.angulo(b);
-                                            System.out.println("El resultado es: "+t+" grados");
                                             break;
                                         case 6:
                                             a = new OVecR2();
@@ -137,7 +132,6 @@ public class Main {
                                             a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
                                             a.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
                                             double alpha = leerReal(sc, "ingrese el Alpha", "Ha ingresado un caracter no valido");
-                                            resul = a.escalarPorVector(alpha);
                                             System.out.println("El resultado es: ("+resul.getX()+", "+resul.getY()+", "+resul.getZ()+")\n");
                                             break;
                                         case 4:
@@ -151,7 +145,7 @@ public class Main {
                                             b.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
                                             b.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
                                             b.setZ(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
-                                            double t = a.productoPunto(b);
+                                            double t = a.prodPunto(b);
                                             System.out.println("El resultado es: "+t);
                                             break;
                                         case 5:
@@ -161,12 +155,6 @@ public class Main {
                                             a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
                                             a.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
                                             b = new OVecR3();
-                                            System.out.println("Ingrese X2, Y2 y Z2");
-                                            b.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
-                                            b.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
-                                            b.setZ(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
-                                            t = a.angulo(b);
-                                            System.out.println("El resultado es: "+t+" grados");
                                             break;
                                         case 6:
                                             a = new OVecR3();
@@ -175,12 +163,7 @@ public class Main {
                                             a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
                                             a.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
                                             b = new OVecR3();
-                                            System.out.println("Ingrese X2, Y2 y Z2");
-                                            b.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
-                                            b.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
-                                            b.setZ(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
-                                            t = a.magnitud(b);
-                                            System.out.println("El resultado es: "+t);
+                                            System.out.println("El resultado es: "+y);
                                             break;
                                         case 7:
                                             a = new OVecR3();
@@ -193,7 +176,7 @@ public class Main {
                                             b.setX(leerReal(sc, "X2", "Ha ingresado un caracter no valido"));
                                             b.setY(leerReal(sc, "Y2", "Ha ingresado un caracter no valido"));
                                             b.setZ(leerReal(sc, "Z2", "Ha ingresado un caracter no valido"));
-                                            resul = a.productoCruz(b);
+                                            resul = a.prodCruz(b);
                                             System.out.println("El resultado es: ("+resul.getX()+" I, "+resul.getY()+" J, "+resul.getZ()+" K)\n");
                                             break;
                                     }
@@ -443,9 +426,9 @@ public class Main {
                                             c.setX(0);
                                             c.setY(-Math.sin(angulo));
                                             c.setZ(Math.cos(angulo));
-                                            double x1 = r.productoPunto(a);
-                                            double y1 = r.productoPunto(b);
-                                            double z1 = r.productoPunto(c);
+                                            double x1 = r.prodPunto(a);
+                                            double y1 = r.prodPunto(b);
+                                            double z1 = r.prodPunto(c);
                                             System.out.println("El resultado es: ("+x1+", "+y1+", "+z1+")\n");
                                             break;
                                         case 2:
@@ -468,9 +451,9 @@ public class Main {
                                             c.setX(Math.sin(angulo));
                                             c.setY(0);
                                             c.setZ(Math.cos(angulo));
-                                            x1 = r.productoPunto(a);
-                                            y1 = r.productoPunto(b);
-                                            z1 = r.productoPunto(c);
+                                            x1 = r.prodPunto(a);
+                                            y1 = r.prodPunto(b);
+                                            z1 = r.prodPunto(c);
                                             System.out.println("El resultado es: ("+x1+", "+y1+", "+z1+")\n");
                                             break;
                                         case 3:
@@ -493,9 +476,9 @@ public class Main {
                                             c.setX(0);
                                             c.setY(0);
                                             c.setZ(1);
-                                            x1 = r.productoPunto(a);
-                                            y1 = r.productoPunto(b);
-                                            z1 = r.productoPunto(c);
+                                            x1 = r.prodPunto(a);
+                                            y1 = r.prodPunto(b);
+                                            z1 = r.prodPunto(c);
                                             System.out.println("El resultado es: ("+x1+", "+y1+", "+z1+")\n");
                                             break;
                                         case 4:
@@ -534,15 +517,15 @@ public class Main {
                                             e.setZ(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
                                             f.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
 
-                                            Double X1 = a.productoPunto(d);
-                                            Double Y1 = a.productoPunto(e);
-                                            Double Z1 = a.productoPunto(f);
-                                            Double X2 = b.productoPunto(d);
-                                            Double Y2 = b.productoPunto(e);
-                                            Double Z2 = b.productoPunto(f);
-                                            Double X3 = c.productoPunto(d);
-                                            Double Y3 = c.productoPunto(e);
-                                            Double Z3 = c.productoPunto(f);
+                                            Double X1 = a.prodPunto(d);
+                                            Double Y1 = a.prodPunto(e);
+                                            Double Z1 = a.prodPunto(f);
+                                            Double X2 = b.prodPunto(d);
+                                            Double Y2 = b.prodPunto(e);
+                                            Double Z2 = b.prodPunto(f);
+                                            Double X3 = c.prodPunto(d);
+                                            Double Y3 = c.prodPunto(e);
+                                            Double Z3 = c.prodPunto(f);
 
                                             System.out.println( "|"+X1+" "+Y1+" "+Z1+"|");
                                             System.out.println( "|"+X2+" "+Y2+" "+Z2+"|");
@@ -574,9 +557,9 @@ public class Main {
                                             g.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
                                             g.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
                                             g.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
-                                            double h = g.productoPunto(a);
-                                            double m = g.productoPunto(b);
-                                            double j = g.productoPunto(c);
+                                            double h = g.prodPunto(a);
+                                            double m = g.prodPunto(b);
+                                            double j = g.prodPunto(c);
                                             System.out.println("El resultado es: ("+h+", "+m+", "+j+")\n");
                                             break;
                                         case 6:
@@ -639,13 +622,8 @@ public class Main {
                                             c = new OVecR3();
                                             c.setX(leerReal(sc, "X3", "Ha ingresado un caracter no valido"));
                                             c.setY(leerReal(sc, "Y3", "Ha ingresado un caracter no valido"));
+
                                             c.setZ(leerReal(sc, "Z3", "Ha ingresado un caracter no valido"));
-                                            X4 = a.escalarPorVector(alpha);
-                                            Y4 = b.escalarPorVector(alpha);
-                                            Z4 = c.escalarPorVector(alpha);
-                                            System.out.println( "|"+X4.getX()+" "+X4.getY()+" "+X4.getZ()+"|");
-                                            System.out.println( "|"+Y4.getX()+" "+Y4.getY()+" "+Y4.getZ()+"|");
-                                            System.out.println( "|"+Z4.getX()+" "+Z4.getY()+" "+Z4.getZ()+"|");
                                             break;
                                     }
                                 } while (y != 8);
@@ -887,30 +865,7 @@ public class Main {
             }
 
         }    while (x!=3);
+        {
 
-    }
-    public static double leerReal(Scanner sc,String mensaje, String mensajeError) {
-        double retval = 0;
-        System.out.println(mensaje);
-        while (!sc.hasNextDouble()) {
-            sc.nextLine();
-            System.out.println(mensajeError);
         }
-        retval = sc.nextDouble();
-        sc.nextLine();
-        return retval;
     }
-
-    public static int leerEntero(Scanner sc,String mensaje, String mensajeError) {
-        int retval = 0;
-        System.out.println(mensaje);
-        while (!sc.hasNextInt()) {
-            sc.nextLine();
-            System.out.println(mensajeError);
-        }
-        retval = sc.nextInt();
-        sc.nextLine();
-        return retval;
-    }
-
-}

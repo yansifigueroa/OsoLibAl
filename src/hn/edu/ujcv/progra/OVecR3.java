@@ -86,4 +86,7 @@ public class OVecR3 {
     public void setZ(double z) {
         this.z = z;
     }
+
+     {
+    }
 }
