@@ -2,6 +2,8 @@ import hn.edu.ujcv.progra.OVecR2;
 import hn.edu.ujcv.progra.OVecR3;
 import hn.edu.ujcv.progra.OVecR4;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[]args){
 
@@ -54,7 +56,6 @@ public class Main {
                                             a.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
                                             a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
                                             double alpha = leerReal(sc, "ingrese el Alpha", "Ha ingresado un caracter no valido");
-                                            System.out.println("El resultado es: ("+resul.getX()+", "+resul.getY()+")\n");
                                             break;
                                         case 4:
                                             a = new OVecR2();
@@ -863,8 +864,6 @@ public class Main {
             }
 
         }    while (x!=3);
-
-        }
     }
     public static double leerReal(Scanner sc,String mensaje, String mensajeError) {
         double retval = 0;
