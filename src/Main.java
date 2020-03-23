@@ -54,7 +54,6 @@ public class Main {
                                             a.setX(leerReal(sc, "X1", "Ha ingresado un caracter no valido"));
                                             a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
                                             double alpha = leerReal(sc, "ingrese el Alpha", "Ha ingresado un caracter no valido");
-                                            resul = a.escalaPorVector(OVecR2 b);
                                             System.out.println("El resultado es: ("+resul.getX()+", "+resul.getY()+")\n");
                                             break;
                                         case 4:
@@ -132,7 +131,6 @@ public class Main {
                                             a.setY(leerReal(sc, "Y1", "Ha ingresado un caracter no valido"));
                                             a.setZ(leerReal(sc, "Z1", "Ha ingresado un caracter no valido"));
                                             double alpha = leerReal(sc, "ingrese el Alpha", "Ha ingresado un caracter no valido");
-                                            System.out.println("El resultado es: ("+resul.getX()+", "+resul.getY()+", "+resul.getZ()+")\n");
                                             break;
                                         case 4:
                                             a = new OVecR3();
@@ -865,7 +863,31 @@ public class Main {
             }
 
         }    while (x!=3);
-        {
 
         }
     }
+    public static double leerReal(Scanner sc,String mensaje, String mensajeError) {
+        double retval = 0;
+        System.out.println(mensaje);
+        while (!sc.hasNextDouble()) {
+            sc.nextLine();
+            System.out.println(mensajeError);
+        }
+        retval = sc.nextDouble();
+        sc.nextLine();
+        return retval;
+    }
+
+    public static int leerEntero(Scanner sc,String mensaje, String mensajeError) {
+        int retval = 0;
+        System.out.println(mensaje);
+        while (!sc.hasNextInt()) {
+            sc.nextLine();
+            System.out.println(mensajeError);
+        }
+        retval = sc.nextInt();
+        sc.nextLine();
+        return retval;
+    }
+}
+
